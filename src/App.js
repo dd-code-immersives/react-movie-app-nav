@@ -508,6 +508,13 @@ const sampleMovies = [
 const App = () => {
   const [movieList, setMovieList] = useState(sampleMovies);
 
+	const handleAddMovie = (title) => {
+		const newMovie = {
+			Title: title
+		}
+		setMovieList([...movieList, newMovie])
+	}
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -522,15 +529,15 @@ const App = () => {
           element: <MovieLayout movieList={movieList} />,
           children: [
             {
-              element: <MovieListPage />,
+              element: <MovieListPage movieList={movieList} />,
               index: true,
             },
             {
-              element: <MovieFormPage />,
+              element: <MovieFormPage handleAddMovie={handleAddMovie} />,
               path: "form",
             },
             {
-              element: <MoviePage />,
+              element: <MoviePage movieList={movieList}/>,
               path: ":title",
             },
           ],

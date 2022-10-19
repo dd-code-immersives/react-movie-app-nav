@@ -7,7 +7,7 @@ const MovieSideBar = (props) => {
 			<h2>Movie Sidebar</h2>
 			{movieList.map((movieItem)=>{
 				return (
-					<Link>{movieItem.Title}</Link>
+					<Link to={`/movies/${movieItem.Title}`}>{movieItem.Title}</Link>
 				)
 			})}
 		</div>
