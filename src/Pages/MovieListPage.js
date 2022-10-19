@@ -1,4 +1,9 @@
+
+
 const MovieListPage = () => {
+
+
+
 	return (
 		<div>
 			<h1>
