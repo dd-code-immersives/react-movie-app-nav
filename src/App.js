@@ -8,6 +8,8 @@ import MoviePage from "./Pages/MoviePage";
 import HomePage from "./Pages/HomePage";
 import "./App.css";
 
+
+//mock data sample movies (make sure is global, outside of App)
 const sampleMovies = [
   {
     Title: "Avatar",
